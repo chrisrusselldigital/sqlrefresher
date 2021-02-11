@@ -4,7 +4,7 @@
 
 Using [mode.com](http://www.mode.com) to practice SQL using their tutorial and databases.
 
-Here's an example [report](https://app.mode.com/editor/cjlearningsql/reports/798101aeafe1).
+Here's an example [report](https://app.mode.com/editor/cjlearningsql/reports/798101aeafe1) in Mode.
 
 ORDER BY
 

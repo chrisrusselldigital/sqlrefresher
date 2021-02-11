@@ -9,3 +9,10 @@ GROUP BY year, month
 limit 100
 
 -- Multiple columns requires multiple groupbys here
+
+select year, month, SUM(volume) from tutorial.aapl_historical_stock_price
+GROUP BY year, month
+ORDER BY year, month ASC
+limit 100
+
+-- using order by with group by
