@@ -8,7 +8,7 @@ Here's an example [report](https://app.mode.com/editor/cjlearningsql/reports/798
 
 ORDER BY
 
-GROUPBY
+GROUP BY
 
 HAVING
 

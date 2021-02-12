@@ -1,0 +1,1 @@
+-- CASE WHEN, works like if/else
