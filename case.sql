@@ -9,9 +9,11 @@ SELECT player_name,
        AS is_a_senior
   FROM benn.college_football_players
 
-  SELECT player_name, state,
-  CASE WHEN state = 'CA' THEN 'yes'
-  ELSE 'no' END
-  AS from_CA
-  FROM benn.college_football_players
-  LIMIT 300
+
+
+SELECT player_name, state,
+      CASE WHEN state = 'CA' THEN 'yes'
+      ELSE 'no' END
+      AS from_CA
+FROM benn.college_football_players
+LIMIT 300
