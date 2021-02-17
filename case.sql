@@ -28,3 +28,36 @@ SELECT player_name,
      AS from_CA_or_FL
   FROM benn.college_football_players
   LIMIT 300
+
+
+-- SELECT *...
+
+  SELECT *,
+  CASE WHEN year = 'JR' THEN 'junior'
+  WHEN year = 'SR' THEN 'senior'
+  ELSE 'neither_junior_or_senior' END AS seniority
+  FROM benn.college_football_players
+  LIMIT 10
+
+-- Bit more of an advanced example, using GROUP BY...
+
+SELECT
+CASE WHEN year = 'FR' THEN 'FR'
+ELSE 'Not FR' END AS year_group,
+COUNT(1) AS count
+FROM benn.college_football_players
+GROUP BY CASE WHEN year = 'FR' THEN 'FR' -- Grouping by the first selection, as there's a COUNT
+ELSE 'Not FR' END
+
+
+/* Write a query that counts the number of 300lb+ players for each of the following regions: West Coast (CA, OR, WA), Texas, and Other (Everywhere else). */
+
+SELECT CASE
+WHEN state = 'CA' THEN 'California'
+WHEN state = 'OR' THEN 'Oregon'
+WHEN state = 'WA' THEN 'Washington'
+ELSE 'Other' END AS Weight_above_300_and_state,
+COUNT(1) as players
+FROM benn.college_football_players
+WHERE weight > 300
+GROUP BY 1
